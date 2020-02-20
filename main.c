@@ -2,13 +2,13 @@
 #include<string.h>
 int main() {
 printf("Enter a figure. For instance, circle(2 3,6)");
-char str[20];
+char str[80];
 char circle[] = "circle";
 
 int f=0;
 int i,x,y,r,k=0,j;
 printf("\n");
-gets_s(str);
+fgets(str,80,stdin);
 printf("\n");
 printf("\n");
 
