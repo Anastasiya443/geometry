@@ -1,8 +1,8 @@
+#include "ft.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ft.h"
 
 void ft(char str[80])
 {
@@ -34,7 +34,15 @@ void ft(char str[80])
     pp = per / 2;
     area = sqrt(pp * (pp - a) * (pp - b) * (pp - c));
     printf("triangle\n");
-    printf("Coord: (%d %d,%d %d,%d %d,%d %d)\n", x1, x2, y1, y2, z1, z2, q1, q2);
+    printf("Coord: (%d %d,%d %d,%d %d,%d %d)\n",
+           x1,
+           x2,
+           y1,
+           y2,
+           z1,
+           z2,
+           q1,
+           q2);
     printf("Area: %.4f\n", area);
     printf("Perimeter: %.4f\n\n", per);
 }

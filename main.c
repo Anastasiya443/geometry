@@ -1,8 +1,8 @@
+#include "fc.h"
+#include "ft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "fc.h"
-#include "ft.h"
 
 int main()
 {
