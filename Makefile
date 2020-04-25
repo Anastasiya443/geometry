@@ -1,7 +1,9 @@
 all:program
 program:main.o fc.o ft.o
-	gcc -g -Wall -lm main.o fc.o ft.o -o program.exe
+	gcc -g -Wall -Werror main.o fc.o ft.o -o program.exe -lm
 *.o:*.c
-	gcc -c *.c
+	gcc -Wall -Werror -c *.c
+run:
+	./program.exe
 clean:
-	rm -rf *.o *.exe
+	rm -rf *.o *.exe main
