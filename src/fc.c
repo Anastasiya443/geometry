@@ -1,7 +1,5 @@
 #include "fc.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 void fc(char str[80])
 {
     char strx[80];

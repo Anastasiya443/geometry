@@ -1,8 +1,4 @@
 #include "ft.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 void ft(char str[80])
 {

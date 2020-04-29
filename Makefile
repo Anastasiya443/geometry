@@ -1,9 +1,13 @@
-all:program
-program:main.o fc.o ft.o
-	gcc -g -Wall -Werror main.o fc.o ft.o -o program.exe -lm
-*.o:*.c
-	gcc -Wall -Werror -c *.c
+all:bin/program
+bin/program:build/main.o build/fc.o build/ft.o
+	gcc -Wall -Werror -Wextra build/main.o build/fc.o build/ft.o -o bin/program -lm
+build/fc.o:src/fc.c
+	gcc -Wall -Werror -c src/fc.c -o build/fc.o
+build/main.o:src/main.c
+	gcc -Wall -Werror -c src/main.c -o build/main.o
+build/ft.o:src/ft.c
+	gcc -Wall -Werror -c src/ft.c -o build/ft.o
 run:
-	./program.exe
+	./bin/program
 clean:
-	rm -rf *.o *.exe main
+	rm -rf build/*.o bin/program
