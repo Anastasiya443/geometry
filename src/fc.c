@@ -1,6 +1,3 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "fc.h"
 void fc(char str[80])
 {
