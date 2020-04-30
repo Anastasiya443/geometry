@@ -1,19 +1,11 @@
-dist: xenial
+language: c
 
 script:
-  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-compiler:
-  - gcc
-language: c
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-7
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+- make && make run_program && make run_test
+- git ls-files src/ | xargs clang-format -i && git diff —exit-code
+- git ls-files test/ | xargs clang-format -i && git diff —exit-code
 
-before_install:
-    - eval "${MATRIX_EVAL}"
+compiler: gcc
+
+dist: xenial
+>>>>>>> develop
