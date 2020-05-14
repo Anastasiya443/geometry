@@ -3,31 +3,36 @@
 
 int main()
 {
-    char str[80];
+    FILE* in = fopen("input.txt", "r");
+    if (in == NULL) {
+        printf("Cannot open file.\nPlease create a file words.txt and write "
+               "the data "
+               "there.");
+        return -1;
+    }
+    char* str = (char*)malloc(80 * sizeof(char));
     char circle[] = "circle";
     char triangle[] = "triangle";
     int fig = 1;
     printf("Enter a figure. For instance, circle(2 3,6). After entering the "
            "figures write the 7\n");
-    while (1) {
-        fgets(str, 80, stdin);
-        if (str[0] == '7')
-            break;
-        if (strncmp(str, circle, 6) != 0 && strncmp(str, triangle, 8) != 0) {
-            printf("Incorrect input\n");
-            continue;
-        }
-        if (!(strncmp(str, circle, 6))) {
-            printf("%d figure:", fig);
-            fig++;
-            fc(str);
-        }
 
-        if (strncmp(str, triangle, 8) == 0) {
-            printf("%d figure:", fig);
-            fig++;
-            ft(str);
-        }
+    fgets(str, 80, in);
+    if (strncmp(str, circle, 6) != 0 && strncmp(str, triangle, 8) != 0) {
+        printf("Incorrect input\n");
     }
+    if (!(strncmp(str, circle, 6))) {
+        printf("%d figure:", fig);
+        fig++;
+        fc(str);
+    }
+
+    if (strncmp(str, triangle, 8) == 0) {
+        printf("%d figure:", fig);
+        fig++;
+        ft(str);
+    }
+
+    fclose(in);
     return 0;
 }
