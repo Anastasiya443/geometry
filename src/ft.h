@@ -1,5 +1,5 @@
-#ifndef _FT_H_
-#define _FT_H_
+#ifndef FT_H
+#define FT_H
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
