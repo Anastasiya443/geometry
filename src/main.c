@@ -5,7 +5,7 @@ int main()
 {
     FILE* in = fopen("input.txt", "r");
     if (in == NULL) {
-        printf("Cannot open file.\nPlease create a file words.txt and write "
+        printf("Cannot open file.\nPlease create a file input.txt and write "
                "the data "
                "there.");
         return -1;
