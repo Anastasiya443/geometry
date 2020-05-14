@@ -1,5 +1,5 @@
-#ifndef _FC_H_
-#define _FC_H_
+#ifndef FC_H
+#define FC_H
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
